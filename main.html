@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Size Tracker</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
-
 <body>
-	 <div id="sizeInfo"></div>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <div id="sizeInfo">
+        <h1 id="sizeText"></h1>
+    </div>
+
+    <script>
+		function updateSize() {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    document.getElementById("sizeText").textContent = Width: ${width} and Height: ${height};
+}
+
+window.addEventListener("resize", updateSize);
+updateSize();
+
+	</script>
 
 </body>
-
 </html>
